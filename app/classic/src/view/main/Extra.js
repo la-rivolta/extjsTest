@@ -1,5 +1,8 @@
 Ext.define('app.view.main.Extra', {
     extend: 'Ext.form.Panel',
+    requires:[
+        'app.view.main.New'
+        ],
     xtype: 'Extra',
     name: 'form',
     controller: 'extra',
@@ -51,4 +54,4 @@ Ext.define('app.view.main.Extra', {
                             formBind: true
                         }  
                     ]
-});
+                });

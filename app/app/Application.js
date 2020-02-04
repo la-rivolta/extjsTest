@@ -23,5 +23,7 @@ Ext.define('app.Application', {
                 }
             }
         );
-    }
+    },
+    defaultToken : 'home'
+
 });
