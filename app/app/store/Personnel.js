@@ -11,8 +11,8 @@ Ext.define('app.store.Personnel', {
     proxy: {
         type: 'ajax',
         url: 'mates.json',
-        reader:{
+        reader: {
             type: 'json',
-            }        
+        }
     }
 });

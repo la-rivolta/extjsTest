@@ -2,10 +2,10 @@ Ext.define('app.view.main.Login', {
     extend: 'Ext.form.Panel',
     xtype: 'login',
 
-     requires: [
-         'app.view.main.MainController',
-         'app.view.main.MainModel'
-     ],
+    requires: [
+        'app.view.main.MainController',
+        'app.view.main.MainModel'
+    ],
 
     modelValidation: true,
     viewModel: {
@@ -26,37 +26,37 @@ Ext.define('app.view.main.Login', {
     closable: false,
     items: {
         xtype: 'form',
-        layout:{
+        layout: {
             type: 'vbox',
             align: 'middle'
         },
         items: [
             {
-            xtype: 'displayfield',
-            value: 'Enter your login and password'
+                xtype: 'displayfield',
+                value: 'Enter your login and password'
             },
             {
-            xtype: 'textfield',
-            name: 'username',
-            emptyText: 'Login',
-            bind: '{userlink.username}',
-            allowBlank: false
-        }, {
-            xtype: 'textfield',
-            name: 'password',
-            inputType: 'password',
-            emptyText: 'Password',
-            bind: '{userlink.password}',
-            allowBlank: false
-        },{
-            xtype: 'button',
-            text: 'Login',
-            formBind: true,
-            ui: 'greenButton',
-            width: 170,
-            listeners: {
-                click: 'onLoginClick'
-            }
-        }]
+                xtype: 'textfield',
+                name: 'username',
+                emptyText: 'Login',
+                bind: '{userlink.username}',
+                allowBlank: false
+            }, {
+                xtype: 'textfield',
+                name: 'password',
+                inputType: 'password',
+                emptyText: 'Password',
+                bind: '{userlink.password}',
+                allowBlank: false
+            }, {
+                xtype: 'button',
+                text: 'Login',
+                formBind: true,
+                ui: 'greenButton',
+                width: 170,
+                listeners: {
+                    click: 'onLoginClick'
+                }
+            }]
     }
 });

@@ -14,39 +14,39 @@ Ext.define('app.view.main.Main', {
     viewModel: 'main',
 
     items: [
-    {
-    title: {
-        bind: '{name}'
-    },
-    ui: 'mainPanel',
-    items: [
-        {   
-            margin: 20,
-            width: 130,
-            xtype: 'button',
-            ui: 'greenButton',
-            text: 'Exit',
-            listeners: {
-                click: 'onLogoffClick'
-            }
-        },
-        {   
-            margin: 20,
-            width: 130,
-            xtype: 'button',
-            ui: 'greenButton',
-            text: '+ Add user',
-            listeners: {
-                click: 'onShowFormadd'
-            }
-            
-        },
         {
-           xtype: 'formadd'
-        },
-         {
-             xtype: 'mainlist'
-         }
-    ]
-}]
+            title: {
+                bind: '{name}'
+            },
+            ui: 'mainPanel',
+            items: [
+                {
+                    margin: 20,
+                    width: 130,
+                    xtype: 'button',
+                    ui: 'greenButton',
+                    text: 'Exit',
+                    listeners: {
+                        click: 'onLogoffClick'
+                    }
+                },
+                {
+                    margin: 20,
+                    width: 130,
+                    xtype: 'button',
+                    ui: 'greenButton',
+                    text: '+ Add user',
+                    listeners: {
+                        click: 'onShowFormadd'
+                    }
+
+                },
+                {
+                    xtype: 'formadd'
+                },
+                {
+                    xtype: 'mainlist'
+                }
+            ]
+        }]
 });

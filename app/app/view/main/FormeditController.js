@@ -4,14 +4,14 @@ Ext.define('app.view.main.FormeditController', {
     alias: 'controller.formedit',
 
     requires: [
-           'app.store.Personnel'
-          ],
+        'app.store.Personnel'
+    ],
 
     store: {
         type: 'personnel'
-       },
+    },
 
-    Save: function(){
+    Save: function () {
         let record = {};
         let values = this.getView('Formedit').getValues();
         record.firstname = values.firstname;
@@ -20,20 +20,22 @@ Ext.define('app.view.main.FormeditController', {
         record.email = values.email;
         record.guid = values.guid;
         const store = Ext.getStore('personnel').data.items;
-        function countIndex(){
-            for(let i = 0; i < store.length; i++){
+
+        function countIndex() {
+            for (let i = 0; i < store.length; i++) {
                 let guid = store[i].data.guid;
-                if(guid == record.guid){
+                if (guid == record.guid) {
                     return i;
                 }
             }
         }
+
         Ext.getStore('personnel').insert(countIndex(), record);
-        Ext.getStore('personnel').removeAt((countIndex()+1));
+        Ext.getStore('personnel').removeAt((countIndex() + 1));
         this.getView().close();
     },
 
-    Cancell: function() {
+    Cancell: function () {
         this.getView().close();
     }
 });

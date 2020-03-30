@@ -1,15 +1,15 @@
 Ext.define('app.view.main.Formedit', {
     extend: 'Ext.form.Panel',
     xtype: 'formedit',
-    
+
     requires: [
         'app.view.main.FormeditController'
     ],
     controller: 'formedit',
     viewModel: {
-         type: 'formedit'
-     },
-    layout:{type:'vbox'},
+        type: 'formedit'
+    },
+    layout: {type: 'vbox'},
 
     ui: 'topPanel',
     autoDestroy: true,
@@ -24,9 +24,9 @@ Ext.define('app.view.main.Formedit', {
             editable: false,
             margin: 10,
             bind: {
-                value: '{userData.guid}' 
+                value: '{userData.guid}'
             }
-        }, 
+        },
         {
             xtype: 'textfield',
             emptyText: 'First name',
@@ -35,14 +35,14 @@ Ext.define('app.view.main.Formedit', {
             bind: {
                 value: '{userData.firstname}'
             }
-        },            
+        },
         {
             xtype: 'textfield',
-            emptyText: 'Last name',            
+            emptyText: 'Last name',
             name: 'lastname',
             margin: 10,
             bind: {
-                value: '{userData.lastname}' 
+                value: '{userData.lastname}'
             }
         },
         {
@@ -54,7 +54,7 @@ Ext.define('app.view.main.Formedit', {
                 value: '{userData.age}'
             }
         },
-        {   
+        {
             xtype: 'textfield',
             vtype: 'email',
             emptyText: 'Email',
@@ -63,7 +63,7 @@ Ext.define('app.view.main.Formedit', {
             bind: {
                 value: '{userData.email}'
             }
-        },    
+        },
         {
             xtype: 'button',
             name: 'Save',
@@ -87,5 +87,5 @@ Ext.define('app.view.main.Formedit', {
                 click: 'Cancell'
             }
         }
-        ]
+    ]
 });

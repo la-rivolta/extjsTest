@@ -1,12 +1,12 @@
 Ext.define('app.view.main.Formadd', {
     extend: 'Ext.form.Panel',
     xtype: 'formadd',
-    
+
     requires: [
         'app.view.main.FormaddController'
     ],
     controller: 'formadd',
-    layout:{type:'hbox'},
+    layout: {type: 'hbox'},
     bodyPadding: 10,
     hidden: true,
     items: [
@@ -15,11 +15,11 @@ Ext.define('app.view.main.Formadd', {
             emptyText: 'First name',
             name: 'firstname',
             margin: 10,
-            allowBlank: false,
-        },            
+            allowBlank: false
+        },
         {
             xtype: 'textfield',
-            emptyText: 'Last name',            
+            emptyText: 'Last name',
             name: 'lastname',
             margin: 10,
             allowBlank: false
@@ -31,14 +31,14 @@ Ext.define('app.view.main.Formadd', {
             margin: 10,
             allowBlank: false
         },
-        {   
+        {
             xtype: 'textfield',
             vtype: 'email',
             emptyText: 'Email',
             name: 'email',
             margin: 10,
             allowBlank: false
-        },    
+        },
         {
             xtype: 'button',
             name: 'Add',
@@ -61,5 +61,5 @@ Ext.define('app.view.main.Formadd', {
                 click: 'Cancell'
             }
         }
-        ]
+    ]
 });
